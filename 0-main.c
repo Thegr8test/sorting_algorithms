@@ -2,15 +2,19 @@
 #include <stdlib.h>
 #include "sort.h"
 
+/**
+ * main - start
+ * Return: 0
+ */
 int main(void)
 {
-    int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
-    size_t m = sizeof(array) / sizeof(array[0]);
+	int aray[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
+	size_t n = sizeof(aray) / sizeof(aray[0]);
 
-    print_array(array, m);
-    printf("\n");
-    bubble_sort(array, m);
-    printf("\n");
-    print_array(array, m);
-    return (0);
+	print_array(aray, n);
+	printf("\n");
+	bubble_sort(aray, n);
+	printf("\n");
+	print_array(aray, n);
+	return (0);
 }

@@ -1,32 +1,33 @@
 #include "sort.h"
-{
-	int temp;
+#include <stdio.h>
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
+/**
+ * bubble_sort - sorts array of integers
+ * @array: array of integer
+ * @size: size of array
+ * Return: void
+ */
 void bubble_sort(int *array, size_t size)
 {
-	size_t j, len = size;
-	bool bubbly = false;
+	size_t i;
+	int temp, sorted;
 
-	if (array == NULL || size < 2)
+	if (!array || size == 0)
 		return;
 
-	while (bubbly == false)
-	{
-		bubbly = true;
-		for (j = 0; j < len - 1; j++)
+	do {
+		sorted = 1;
+		for (i = 0; i < size - 1; i++)
 		{
-			if (array[j] > array[j + 1])
+			if (array[i] > array[i + 1])
 			{
-				swap_ints(array + j, array + j + 1);
+				sorted = 0;
+				temp = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = temp;
 				print_array(array, size);
-				bubbly = false;
 			}
 		}
-		len--;
-	}
+
+	} while (sorted == 0);
 }
