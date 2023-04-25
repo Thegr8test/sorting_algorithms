@@ -2,7 +2,7 @@
 
 void front_swap_node(listint_t **list, listint_t **tail, listint_t **shaker);
 void front_swap_node(listint_t **list, listint_t **tail, listint_t **shaker);
-void sort_list_ctl(listint_t **list);
+void cocktail_sort_list(listint_t **list);
 
 /**
  * front_swap_node - Swap a node
@@ -55,10 +55,10 @@ void front_swap_node(listint_t **list, listint_t **tail, listint_t **shaker)
 }
 
 /**
- * sort_list_ctl - Sort a list of ints
+ * cocktail_sort_list - Sort a list of ints
  * @list: pointer to the head
  */
-void sort_list_ctl(listint_t **list)
+void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tail, *shaker;
 	bool shaken_not_stirred = false;
